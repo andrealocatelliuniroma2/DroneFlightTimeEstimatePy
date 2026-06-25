@@ -19,6 +19,7 @@ from autonomyEstimate import autonomyTime
 from batteryVoltageConvertion import batteryVoltage
 from batteryWeightEstimate import batteryWeight
 from estimateComponentCurrent import estimate_avionics_current
+from throttle import estimateThrottleHover
 
 def main():
     
@@ -70,6 +71,14 @@ def main():
     # Avionics current (Pixhawk + ESC idle), referred to pack voltage
     I_avionics_A = estimate_avionics_current(motorVoltage, info.numMotor)
     print(f"Estimated Components Current: {I_avionics_A:.2f} A")
+
+    # Throttle
+    throttle_pct, measured = estimateThrottleHover(
+        thrustSingleMotor_g,
+        tabDatasheet["thrust_g"],
+        tabDatasheet.get("throttle_pct"))
+    tag = "" if measured else "(ESTIMATED)"
+    print(f"Throttle: {throttle_pct:.0f} % {tag}")
 
     # Estimated flight time
     autonomyTimeEstimate = autonomyTime(estimateI_A,I_avionics_A,info.battery_mAh,info.numMotor)

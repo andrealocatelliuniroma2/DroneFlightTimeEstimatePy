@@ -1,0 +1,17 @@
+{
+    "frameType":"TAROT 680MM",
+    "numMotor": 6,
+    "weightFrame_g": 600,
+    "weightBattery_g": 1100, 
+    "weightMotor_g": 108,
+    "weightExtra_g": 100,
+    "weightPayload_g": 1000,
+    "weightProp_g": 27,
+    "battery_mAh": 12000,
+    "batteryV_S": 3,
+    "batteryType": "LiPo",
+    "motorType": "AT2814",
+    "motorKV": "KV900",
+    "propType": "APC 12*6",
+    "datasheetFile": "AT2814_datasheet.csv"
+}

@@ -2,16 +2,16 @@
     "frameType": "TAROT 680MM",
     "numMotor": 6,
     "weightFrame_g": 600,
-    "weightBattery_g": -1,
-    "weightMotor_g": 128,
+    "weightBattery_g": 1100,
+    "weightMotor_g": 108,
     "weightExtra_g": 100,
     "weightPayload_g": 1000,
     "weightProp_g": 25,
     "battery_mAh": 12000,
     "batteryV_S": 4,
     "batteryType": "LiPo",
-    "motorType": "TMOTOR_U3",
-    "motorKV": "KV700",
-    "propType": "T-MOTOR 12*4CF",
-    "datasheetFile": "U3_KV700_datasheet.csv"
+    "motorType": "X2814",
+    "motorKV": "KV900",
+    "propType": "EOLO 12*6.5",
+    "datasheetFile": "X2814_datasheet.csv"
 }

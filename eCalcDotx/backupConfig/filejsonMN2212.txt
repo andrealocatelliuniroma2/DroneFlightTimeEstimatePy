@@ -1,0 +1,17 @@
+{
+    "frameType":"TAROT 680MM",
+    "numMotor": 6,
+    "weightFrame_g": 600,
+    "weightBattery_g": -1, 
+    "weightMotor_g": 65,
+    "weightExtra_g": 100,
+    "weightPayload_g": 1000,
+    "weightProp_g": 25,
+    "battery_mAh": 12000,
+    "batteryV_S": 4,
+    "batteryType": "LiPo",
+    "motorType": "MN2212",
+    "motorKV": "KV780",
+    "propType": "T-MOTOR 9545B",
+    "datasheetFile": "MN2212_datasheet.csv"
+}

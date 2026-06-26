@@ -8,6 +8,7 @@ def displayInfo(info):
     print("---------------------------Drone info ----------------------")
     print(f"Frame : {info.frameType}")
     print(f"Number of motors:   {info.numMotor}")
+    print(f"Configuration:   {info.configType}")
     print(f"Frame weight:   {info.weightFrame_g} g")
     print(f"Battery weight: {info.weightBattery_g} g")
     print(f"Motor weight: {info.weightMotor_g} g")

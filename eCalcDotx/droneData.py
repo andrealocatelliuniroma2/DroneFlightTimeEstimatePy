@@ -20,3 +20,4 @@ class DroneInfo:
     motorKV: str
     motorType: str
     propType: str
+    configType: str

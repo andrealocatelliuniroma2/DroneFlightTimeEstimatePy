@@ -2,6 +2,7 @@
     "frameType": "TAROT 680MM",
     "numMotor": 6,
     "weightFrame_g": 600,
+    "configType": "flat",
     "weightBattery_g": 1100,
     "weightMotor_g": 108,
     "weightExtra_g": 100,

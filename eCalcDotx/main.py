@@ -57,10 +57,26 @@ def main():
     print(f"Total weight: {weightTot} g")
 
     #Thrust(g) -> A
+    """
     thrustSingleMotor_g = weightTot/info.numMotor
     motorVoltage = batteryVoltage(info.batteryV_S)
     print(f"Motor Voltage: {motorVoltage} V")
-    
+    """
+
+    #Thrust(g) -> A
+    if info.configType == "coax":
+        if info.numMotor % 2 != 0:
+            raise ValueError("coax richiede un numero pari di motori")
+        n_discs = info.numMotor // 2
+        kappaCoax = 0.8
+        thrustSingleMotor_g = weightTot / (info.numMotor *kappaCoax)
+    else:  # flat
+        n_discs = info.numMotor
+        thrustSingleMotor_g = weightTot / info.numMotor
+    #print(f"Config: {info.configType}  (discs={n_discs})")
+    motorVoltage = batteryVoltage(info.batteryV_S)
+
+
     #tabDatasheet = selectBlock(datasheetMotor, kv=info.motorKV, voltage=motorVoltage, prop=info.propType)  # vecchio codice
     tabDatasheet = selectBlock_csv(datasheetMotor, kv=info.motorKV, voltage=motorVoltage, prop=info.propType)
     
